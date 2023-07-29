@@ -1,0 +1,31 @@
+{
+	"name": "directus-extension-email-verification",
+	"description": "This hook sends an email verification user",
+	"icon": "extension",
+	"version": "1.0.0",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-custom-hook"
+	],
+	"type": "module",
+	"directus:extension": {
+		"type": "hook",
+		"path": "dist/index.js",
+		"source": "src/index.js",
+		"host": "^10.1.7"
+	},
+	"scripts": {
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "10.1.7"
+	},
+	"dependencies": {
+		"@directus/api": "^12.1.2",
+		"@directus/errors": "^0.0.2",
+		"jsonwebtoken": "^9.0.1"
+	}
+}
